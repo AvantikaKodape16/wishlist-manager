@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Wishlist 🌟</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+</head>
+<body>
+  <div class="toggle-container">
+    <span id="quote"></span>
+    <button id="modeToggle">🌙</button>
+  </div>
+
+  <div class="container">
+    <h1>My Wishlist</h1>
+    
+    <!-- Search bar -->
+    <input type="text" id="search" placeholder="Search..." oninput="searchItems()" />
+
+    <!-- Input for new items -->
+    <div class="input-group">
+      <input type="text" id="title" placeholder="Title" />
+      <input type="url" id="url" placeholder="https://example.com" />
+      <input type="date" id="deadline" />
+      <select id="tag">
+        <option value="General">Tag</option>
+        <option value="📖 Read">📖 Read</option>
+        <option value="🛍️ Buy">🛍️ Buy</option>
+        <option value="🎬 Watch">🎬 Watch</option>
+        <option value="🧠 Study">🧠 Study</option>
+      </select>
+      <button onclick="addLink()">Add</button>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="filters">
+      <button onclick="filterList('all')">All</button>
+      <button onclick="filterList('done')">Completed</button>
+      <button onclick="filterList('pending')">Pending</button>
+    </div>
+
+    <!-- Calendar view button -->
+    <button onclick="toggleCalendar()">📅 View Calendar</button>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div id="progressText">0% completed</div>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+    </div>
+
+    <!-- Wishlist List -->
+    <ul id="wishlist"></ul>
+
+    <!-- Export/Import -->
+    <div class="export-import">
+      <button onclick="exportList()">📤 Export</button>
+      <input type="file" id="importInput" accept="application/json" />
+    </div>
+
+    <!-- Focus mode -->
+    <button onclick="enterFocusMode()">🧘 Focus Mode</button>
+
+    <!-- Sticky notes -->
+    <div id="stickyNoteContainer"></div>
+
+    <!-- Analytics (hidden) -->
+    <div id="analytics" style="display:none;"></div>
+
+    <!-- AI Suggestions -->
+    <div id="ai-suggestion"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
