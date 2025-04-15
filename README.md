@@ -3,7 +3,7 @@ A simple and interactive Wishlist Web App built using HTML, CSS, and JavaScript.
 
 LIVE : https://my-wishlist-app.netlify.app
 
-Wishlist Web App 🎁
+ # Wishlist Web App 🎁
 
 A simple and interactive Wishlist Web App built using HTML, CSS, and JavaScript. The app allows users to:
 
@@ -19,7 +19,7 @@ View a rotating motivational quote at the top for daily inspiration.
 
 
 
-Features:
+ # Features:
 
 Add items with title, link, tag, and deadline.
 
